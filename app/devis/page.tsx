@@ -29,7 +29,7 @@ export default function DevisPage() {
     date: '',
     time: '',
     goodsType: '',
-    weight: 1,
+    weight: 100,
     temperature: '',
     urgency: 'standard',
     transportType: 'general'
@@ -46,8 +46,8 @@ export default function DevisPage() {
     const estimatedDistance = 50
     const distancePrice = estimatedDistance * 1.2
     
-    // Facteur poids
-    const weightPrice = formData.weight * 8
+    // Facteur poids (converti de kg en prix, environ 0.08€ par kg)
+    const weightPrice = formData.weight * 0.08
     
     // Facteur type de transport
     const typeMultiplier = formData.transportType === 'refrigerated' ? 1.4 : 
@@ -162,15 +162,26 @@ export default function DevisPage() {
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="time">Heure souhaitée</Label>
+                      <Label htmlFor="time">Heure souhaitée (24h)</Label>
                       <div className="relative">
                         <Clock className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                         <Input
                           id="time"
-                          type="time"
+                          type="text"
                           className="pl-10"
                           value={formData.time}
-                          onChange={(e) => handleInputChange('time', e.target.value)}
+                          onChange={(e) => {
+                            let value = e.target.value.replace(/[^\d:]/g, '');
+                            if (value.length === 2 && !value.includes(':')) {
+                              value = value + ':';
+                            }
+                            if (value.length <= 5) {
+                              handleInputChange('time', value);
+                            }
+                          }}
+                          placeholder="__:__"
+                          maxLength={5}
+                          pattern="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$"
                         />
                       </div>
                     </div>
@@ -190,19 +201,19 @@ export default function DevisPage() {
 
                   {/* Poids */}
                   <div className="space-y-2">
-                    <Label htmlFor="weight">Poids estimé (en tonnes)</Label>
+                    <Label htmlFor="weight">Poids estimé (en kg)</Label>
                     <div className="relative">
                       <Package className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                       <Input
                         id="weight"
                         type="number"
-                        min="0.1"
-                        max="20"
-                        step="0.1"
-                        placeholder="1.0"
+                        min="1"
+                        max="1000"
+                        step="1"
+                        placeholder="100"
                         className="pl-10"
                         value={formData.weight}
-                        onChange={(e) => handleInputChange('weight', parseFloat(e.target.value) || 1)}
+                        onChange={(e) => handleInputChange('weight', parseInt(e.target.value) || 100)}
                       />
                     </div>
                   </div>
@@ -290,7 +301,7 @@ export default function DevisPage() {
                       </div>
                       <div className="flex justify-between">
                         <span>Poids:</span>
-                        <span className="font-medium">{formData.weight}t</span>
+                        <span className="font-medium">{formData.weight}kg</span>
                       </div>
                       {formData.transportType === 'refrigerated' && formData.temperature && (
                         <div className="flex justify-between">

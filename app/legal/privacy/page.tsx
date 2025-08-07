@@ -2,16 +2,16 @@ import { Metadata } from 'next'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export const metadata: Metadata = {
-  title: 'Politique de Confidentialité | FroidExpress',
-  description: 'Politique de confidentialité et protection des données personnelles de FroidExpress.',
+  title: 'Politique de Confidentialité | AZExpress',
+  description: 'Politique de confidentialité et protection des données personnelles d\'AZExpress.',
 }
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-frost py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-night mb-4">
             Politique de Confidentialité
           </h1>
           <p className="text-xl text-gray-600">
@@ -26,7 +26,7 @@ export default function PrivacyPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-600">
-                FroidExpress collecte des données personnelles dans le cadre de ses services 
+                AZExpress collecte des données personnelles dans le cadre de ses services 
                 de transport frigorifique. Les données collectées sont nécessaires à :
               </p>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
@@ -130,8 +130,8 @@ export default function PrivacyPage() {
               </ul>
               <p className="text-gray-600 mt-4">
                 Pour exercer ces droits, contactez-nous à : 
-                <a href="mailto:dpo@froidexpress.fr" className="text-teal-600 hover:text-teal-700">
-                  dpo@froidexpress.fr
+                <a href="mailto:dpo@azexpress.fr" className="text-glacier hover:text-blue-600">
+                  dpo@azexpress.fr
                 </a>
               </p>
             </CardContent>
@@ -163,7 +163,7 @@ export default function PrivacyPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-600">
-                FroidExpress met en œuvre des mesures techniques et organisationnelles 
+                AZExpress met en œuvre des mesures techniques et organisationnelles 
                 appropriées pour protéger vos données personnelles :
               </p>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
@@ -187,7 +187,7 @@ export default function PrivacyPage() {
               <div className="mt-4 space-y-2">
                 <p className="text-gray-600">
                   <strong>Délégué à la Protection des Données :</strong><br />
-                  Email : <a href="mailto:dpo@froidexpress.fr" className="text-teal-600 hover:text-teal-700">dpo@froidexpress.fr</a><br />
+                  Email : <a href="mailto:dpo@azexpress.fr" className="text-glacier hover:text-blue-600">dpo@azexpress.fr</a><br />
                   Adresse : 123 Avenue de la République, 93200 Saint-Denis
                 </p>
               </div>

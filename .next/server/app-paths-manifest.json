@@ -1,7 +1,7 @@
 {
-  "/legal/mentions-legales/page": "app/legal/mentions-legales/page.js",
-  "/services/page": "app/services/page.js",
+  "/devis/page": "app/devis/page.js",
   "/about/page": "app/about/page.js",
   "/contact/page": "app/contact/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/payment/page": "app/payment/page.js"
 }

@@ -202,7 +202,7 @@ export default function ServicesPage() {
             </div>
             <div className="relative">
               <img
-                src="/placeholder.svg?height=500&width=600"
+                src="/flot.png?height=500&width=600"
                 alt="Flotte de véhicules AZExpress avec différents types de camions"
                 className="rounded-2xl shadow-xl w-full h-auto"
               />
@@ -236,7 +236,7 @@ export default function ServicesPage() {
             <Button asChild size="lg" variant="secondary" className="text-lg px-8 py-3 bg-white text-glacier hover:bg-gray-100">
               <Link href="/devis">Demander un Devis</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-3 text-white border-white hover:bg-white hover:text-glacier">
+            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-3 text-glacier border-white hover:bg-white hover:text-glacier">
               <Link href="/contact">Nous Contacter</Link>
             </Button>
           </div>

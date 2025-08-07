@@ -2,20 +2,20 @@ import { Metadata } from 'next'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export const metadata: Metadata = {
-  title: 'Mentions Légales | FroidExpress',
-  description: 'Mentions légales de FroidExpress, société de transport frigorifique basée à Saint-Denis.',
+  title: 'Mentions Légales | AZExpress',
+  description: 'Mentions légales d\'AZExpress, société de transport et logistique basée à Saint-Denis.',
 }
 
 export default function MentionsLegalesPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-frost py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-night mb-4">
             Mentions Légales
           </h1>
           <p className="text-xl text-gray-600">
-            Informations légales concernant FroidExpress
+            Informations légales concernant AZExpress
           </p>
         </div>
 
@@ -27,7 +27,7 @@ export default function MentionsLegalesPage() {
             <CardContent className="space-y-4">
               <div>
                 <h3 className="font-semibold text-gray-900 mb-2">Dénomination sociale</h3>
-                <p className="text-gray-600">FroidExpress SARL</p>
+                <p className="text-gray-600">AZExpress SARL</p>
               </div>
               
               <div>

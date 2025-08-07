@@ -17,7 +17,7 @@ export default function PaymentPage() {
 
   // Mock order data
   const orderData = {
-    id: 'FE-2024-001',
+    id: 'AZ-2024-001',
     departure: 'Paris 75001',
     arrival: 'Lyon 69000',
     date: '15 janvier 2024',
@@ -40,7 +40,7 @@ export default function PaymentPage() {
 
   if (isCompleted) {
     return (
-      <div className="min-h-screen bg-gray-50 py-12">
+      <div className="min-h-screen bg-frost py-12">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card>
             <CardContent className="text-center py-12">
@@ -96,7 +96,7 @@ export default function PaymentPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-frost py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -283,7 +283,7 @@ export default function PaymentPage() {
                       <div className="space-y-2 text-sm">
                         <div><strong>IBAN:</strong> FR76 1234 5678 9012 3456 7890 123</div>
                         <div><strong>BIC:</strong> ABCDEFGH</div>
-                        <div><strong>Bénéficiaire:</strong> FroidExpress SARL</div>
+                        <div><strong>Bénéficiaire:</strong> AZExpress SARL</div>
                         <div><strong>Référence:</strong> {orderData.id}</div>
                       </div>
                       <p className="text-xs text-gray-500 mt-3">

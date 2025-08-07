@@ -2,16 +2,16 @@ import { Metadata } from 'next'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export const metadata: Metadata = {
-  title: 'Conditions d\'Utilisation | FroidExpress',
-  description: 'Conditions générales d\'utilisation et de vente de FroidExpress.',
+  title: 'Conditions d\'Utilisation | AZExpress',
+  description: 'Conditions générales d\'utilisation et de vente d\'AZExpress.',
 }
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-frost py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-night mb-4">
             Conditions d'Utilisation
           </h1>
           <p className="text-xl text-gray-600">
@@ -27,7 +27,7 @@ export default function TermsPage() {
             <CardContent>
               <p className="text-gray-600">
                 Les présentes conditions générales ont pour objet de définir les modalités 
-                et conditions dans lesquelles FroidExpress fournit ses services de transport 
+                et conditions dans lesquelles AZExpress fournit ses services de transport 
                 frigorifique aux clients, qu'ils soient professionnels ou particuliers.
               </p>
             </CardContent>
@@ -53,7 +53,7 @@ export default function TermsPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-600">
-                FroidExpress propose les services suivants :
+                AZExpress propose les services suivants :
               </p>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
                 <li>Transport frigorifique de marchandises</li>
@@ -130,10 +130,10 @@ export default function TermsPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle>Article 7 - Obligations de FroidExpress</CardTitle>
+              <CardTitle>Article 7 - Obligations d'AZExpress</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-gray-600">FroidExpress s'engage à :</p>
+              <p className="text-gray-600">AZExpress s'engage à :</p>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
                 <li>Respecter les températures de transport convenues</li>
                 <li>Livrer dans les délais convenus</li>
@@ -161,7 +161,7 @@ export default function TermsPage() {
               <div>
                 <h3 className="font-semibold text-gray-900 mb-2">8.2 Limitation de responsabilité</h3>
                 <p className="text-gray-600">
-                  La responsabilité de FroidExpress est limitée à la valeur déclarée 
+                  La responsabilité d'AZExpress est limitée à la valeur déclarée 
                   des marchandises. Elle ne peut être engagée en cas de force majeure 
                   ou de faute du client.
                 </p>
@@ -201,7 +201,7 @@ export default function TermsPage() {
               <p className="text-gray-600">
                 Toute réclamation doit être formulée par écrit dans les 3 jours 
                 suivant la livraison. Passé ce délai, aucune réclamation ne sera acceptée. 
-                Les réclamations sont à adresser à : contact@froidexpress.fr
+                Les réclamations sont à adresser à : contact@azexpress.fr
               </p>
             </CardContent>
           </Card>
@@ -225,7 +225,7 @@ export default function TermsPage() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600">
-                FroidExpress se réserve le droit de modifier les présentes conditions 
+                AZExpress se réserve le droit de modifier les présentes conditions 
                 générales à tout moment. Les nouvelles conditions seront applicables 
                 dès leur mise en ligne sur le site internet.
               </p>
