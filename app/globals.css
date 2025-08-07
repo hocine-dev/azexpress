@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 25% 22%; /* Bleu nuit */
+    --card: 0 0% 100%;
+    --card-foreground: 210 25% 22%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 25% 22%;
+    --primary: 195 100% 47%; /* Bleu glacier */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 214 29% 96%; /* Gris froid */
+    --secondary-foreground: 210 25% 22%;
+    --muted: 214 29% 96%;
+    --muted-foreground: 210 25% 22%;
+    --accent: 214 29% 96%;
+    --accent-foreground: 210 25% 22%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 195 100% 47%;
+    --radius: 0.75rem;
+    --chart-1: 195 100% 47%;
+    --chart-2: 214 29% 96%;
+    --chart-3: 210 25% 22%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 210 25% 22%;
+    --foreground: 210 40% 98%;
+    --card: 210 25% 22%;
+    --card-foreground: 210 40% 98%;
+    --popover: 210 25% 22%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 195 100% 47%;
+    --primary-foreground: 210 25% 22%;
+    --secondary: 214 29% 96%;
+    --secondary-foreground: 210 25% 22%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 195 100% 47%;
+    --chart-1: 195 100% 47%;
+    --chart-2: 214 29% 96%;
+    --chart-3: 210 25% 22%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom focus styles */
+.focus-visible:focus-visible {
+  @apply outline-none ring-2 ring-glacier ring-offset-2;
+}
+
+/* Brand color utilities */
+.text-glacier {
+  color: #00AEEF;
+}
+
+.bg-glacier {
+  background-color: #00AEEF;
+}
+
+.text-frost {
+  color: #F2F5F9;
+}
+
+.bg-frost {
+  background-color: #F2F5F9;
+}
+
+.text-night {
+  color: #1E2A38;
+}
+
+.bg-night {
+  background-color: #1E2A38;
+}
+
+.border-glacier {
+  border-color: #00AEEF;
+}
+
+.hover\:bg-glacier:hover {
+  background-color: #00AEEF;
+}
+
+.hover\:text-glacier:hover {
+  color: #00AEEF;
+}
