@@ -179,7 +179,7 @@ Les contributions sont les bienvenues ! N'hésitez pas à :
 
 Pour toute question ou support :
 - Créer une [issue](https://github.com/hocine-dev/azexpress/issues)
-- Email : contact@azexpress.fr
+- Email : hocinedev4@gmail.com
 
 ---
 
