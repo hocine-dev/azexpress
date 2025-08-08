@@ -25,6 +25,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Git internals and cache files
+.git/objects/pack/*.pack
+.git/objects/pack/*.idx
+*.pack.gz
+*.pack
+*.idx
+
 # local env files
 .env*.local
 .env.local

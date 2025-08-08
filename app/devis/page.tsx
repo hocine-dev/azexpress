@@ -62,6 +62,17 @@ export default function DevisPage() {
     
     setQuote(Math.round(totalPrice))
     setShowQuote(true)
+    
+    // Scroll vers la section des résultats sur mobile
+    setTimeout(() => {
+      const quoteSection = document.getElementById('quote-results')
+      if (quoteSection && window.innerWidth < 1024) { // lg breakpoint
+        quoteSection.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        })
+      }
+    }, 100)
   }
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -259,7 +270,7 @@ export default function DevisPage() {
           </div>
 
           {/* Résultat du devis */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1" id="quote-results">
             <Card className="sticky top-24 bg-white">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">

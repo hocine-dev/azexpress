@@ -31,6 +31,14 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={inter.className}>
+        {/* Bannière d'avertissement */}
+        <div className="bg-yellow-400 text-black py-2 px-4 text-center font-medium text-sm">
+          <div className="max-w-7xl mx-auto flex items-center justify-center space-x-2">
+            <span className="text-lg">⚠️</span>
+            <span>Site en test – Données à titre indicatif uniquement</span>
+            <span className="hidden sm:inline">– Version de démonstration</span>
+          </div>
+        </div>
         <Header />
         <main className="min-h-screen">
           {children}

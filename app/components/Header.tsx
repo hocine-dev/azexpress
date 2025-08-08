@@ -88,7 +88,7 @@ export default function Header() {
                   <Phone className="h-4 w-4 mr-2" />
                   01 23 45 67 89
                 </a>
-                <Button asChild className="w-full mt-2 bg-glacier hover:bg-blue-600 text-white">
+                <Button asChild className="w-full mt-2 bg-glacier hover:bg-blue-600 text-white" onClick={() => setIsMenuOpen(false)}>
                   <Link href="/devis">Devis Gratuit</Link>
                 </Button>
               </div>
